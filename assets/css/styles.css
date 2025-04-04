@@ -53,6 +53,9 @@
   
   .nav-links li {
     cursor: pointer;
+    color: var(--color-1);
+    font-size: 1.2vw;
+    font-weight: 600;
   }
   
   .cta-button {
@@ -75,20 +78,20 @@
   /* Header */
   header {
     background-color: var(--color-5);
-    padding: 4%;
-    height: 870px;
+    height: 80dvh;
     position: relative;
   }
   
   .container {
     max-width: 1800px;
     margin: 0 auto;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
     overflow-x: hidden;
-    gap: 40px;
+    gap: 0px;
   }
   
   .main-title {
@@ -120,12 +123,18 @@
   
   .main-images {
     display: flex;
-    gap: 20px;
+    justify-content: space-between;
+    gap: 40px;
   }
   
   .main-images img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
+  }
+
+  .main-images img:hover {
+    scale: 1.02;
   }
   
   /* Responsividade */
@@ -174,7 +183,6 @@
     }
     .main-images {
       flex-direction: column;
-      gap: 15px;
       margin-top: 20px;
       max-width: 50%;
 
