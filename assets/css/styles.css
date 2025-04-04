@@ -1,0 +1,211 @@
+/* Reset e variáveis */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  :root {
+    --color-1: #F2F2F2;
+    --color-2: #D98C4A;
+    --color-3: #F2D0A7;
+    --color-4: #5A56BF;
+    --color-5: #2924A6;
+    --main-font: "Inter", sans-serif;
+  }
+  
+  .acesso-aluno {
+    color: black;
+  }
+
+  /* Geral */
+  body {
+    font-family: var(--main-font);
+    color: var(--color-1);
+  }
+  
+  /* Nav */
+  nav {
+    width: 100%;
+    background-color: var(--color-3);
+  }
+  
+  .nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .logo img {
+    width: 110px; /* Metade de 220px */
+    border-radius: 50%;
+  }
+  
+  .nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+  }
+  
+  .nav-links li {
+    cursor: pointer;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: var(--color-2);
+    border-radius: 20px;
+  }
+  
+  .cta-button a {
+    text-decoration: none;
+    color: var(--color-1);
+  }
+  
+  /* Hover CTA */
+  .cta-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 2px 10px 1px var(--color-2);
+  }
+  
+  /* Header */
+  header {
+    background-color: var(--color-5);
+    padding: 4%;
+    height: 870px;
+    position: relative;
+  }
+  
+  .container {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    overflow-x: hidden;
+    gap: 40px;
+  }
+  
+  .main-title {
+    max-width: 50%;
+  }
+  
+  .main-title h1 {
+    font-size: 3.5vw;
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .main-title p {
+    font-size: 2vw;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  header .cta-button {
+    padding: 10px 20px;
+    background-color: var(--color-2);
+    border-radius: 20px;
+  }
+  
+  header .cta-button a {
+    text-decoration: none;
+    color: var(--color-1);
+  }
+  
+  .main-images {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .main-images img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsividade */
+  
+  /* Para telas até 1024px */
+  @media (max-width: 1024px) {
+    .main-title h1 {
+      font-size: 4vw;
+    }
+    .main-title p {
+      font-size: 2.5vw;
+    }
+  }
+  
+  /* Para telas até 768px */
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-links ul {
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      display: none;
+    }
+    header {
+      padding: 2%;
+      height: auto;
+    }
+    .container {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 10px 40px;
+      
+    }
+    .main-title {
+      max-width: 100%;
+    }
+    .main-title h1 {
+      font-size: 6vw;
+    }
+    .main-title p {
+      font-size: 3vw;
+    }
+    .main-images {
+      flex-direction: column;
+      gap: 15px;
+      margin-top: 20px;
+      max-width: 50%;
+
+      img:nth-child(1){
+        display: none;
+      }
+    }
+  }
+  
+  /* Para telas até 480px */
+  @media (max-width: 480px) {
+    .logo img {
+      width: 80px;
+    }
+    .nav-links ul {
+      gap: 5px;
+    }
+    .nav-links li {
+      font-size: 0.9rem;
+    }
+    .cta-button {
+      padding: 8px 16px;
+    }
+    .main-title h1 {
+      font-size: 8vw;
+    }
+    .main-title p {
+      font-size: 4vw;
+    }
+    .main-images img {
+      width: 100%;
+    }
+  }
+  
